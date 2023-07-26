@@ -1,0 +1,29 @@
+from polygon import RESTClient
+import json
+from typing import cast
+from urllib3 import HTTPResponse
+
+API_KEY = 'MY_PERSONAL_API_KEY'
+
+client = RESTClient(API_KEY)
+
+aggs = cast(
+    HTTPResponse,
+    client.get_aggs(
+        'TSLA',
+        1,
+        'day',
+        '2022-01-01',
+        '2023-07-17',
+        raw=True
+    ),
+)
+
+data = json.loads(aggs.data)
+
+for item in data:
+    if item == 'results':
+        rawData = data[item]
+
+for bar in rawData:
+    print(bar)

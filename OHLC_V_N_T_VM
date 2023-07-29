@@ -3,7 +3,7 @@ import json
 from typing import cast
 from urllib3 import HTTPResponse
 
-API_KEY = 'MY_PERSONAL_API_KEY'
+API_KEY = 'MY_Personal_API_KEY'
 
 client = RESTClient(API_KEY)
 
@@ -19,11 +19,12 @@ aggs = cast(
     ),
 )
 
-data = json.loads(aggs.data)
+data = json.loads(aggs.data) #json.loads() method is used to convert raw response data (aggs.data) into Python dictionary data
 
-for item in data:
+
+for item in data: # look through the data dictionary and check if the key 'results' is present; if it is store OHLC data in variable 'rawData'
     if item == 'results':
         rawData = data[item]
 
-for bar in rawData:
-    print(bar)
+for bar in rawData: #loop through each bar in 'rawData and print each bar's data
+    print(bar)#each bar in the loop contanins the OHLC data for a specific time period

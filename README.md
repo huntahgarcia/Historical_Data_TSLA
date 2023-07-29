@@ -2,7 +2,7 @@
 
 Below is an overview of my project to retrieve & show stock data in Python
 
-Goal: Open, Close, High, Low, Volume, Vol Weighted Avg Price, Time, & # of transactions aggregate window 
+Goal: Open, Close, High, Low, Volume, Vol Weighted Avg Price, Time, & # of transactions in aggregate window 
 
 Status: Complete
 

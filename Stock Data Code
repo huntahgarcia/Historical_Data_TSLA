@@ -27,4 +27,4 @@ for item in data: # look through the data dictionary and check if the key 'resul
         rawData = data[item]
 
 for bar in rawData: #loop through each bar in 'rawData and print each bar's data
-    print(bar) #each bar in the loop contanins the OHLC data for a specific time period
+    print(bar) #each bar in the loop contains the Open, High, Low, & Close data for a specific time period
